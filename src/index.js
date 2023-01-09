@@ -1,4 +1,4 @@
-import  React, { Suspense } from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 
@@ -29,16 +29,8 @@ i18n
     backend: { loadPath: "/assets/locales/{{lng}}/translation.json" },
   });
 
-/*
-function App() {
-  const { t } = useTranslation();
-
-  return <h2>{t("welcome_to_react")}</h2>;
-}
-*/
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const loadingMarkup = (<div className="text-center">Loading...</div>);
+const loadingMarkup = <div className="text-center">Loading...</div>;
 
 root.render(
   <Suspense fallback={loadingMarkup}>
